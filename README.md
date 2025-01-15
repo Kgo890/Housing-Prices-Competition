@@ -1,5 +1,5 @@
 Context(why):
-Took on a Kaggle challenge where we used a preset database and test out machine learning basics 
+- Took on a Kaggle challenge where we used a preset database and test out machine learning basics 
 
 Problem(question):
 - You are looking at houses in the town of Ames, Iowa. You as a homeowner want to find the best valued property 

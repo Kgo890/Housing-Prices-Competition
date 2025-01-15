@@ -1,5 +1,5 @@
 Context(why):
-- Took on a Kaggle challenge where we used a preset database and test out machine learning basics 
+- 1Took on a Kaggle challenge where we used a preset database and test out machine learning basics 
 
 Problem(question):
 - You are looking at houses in the town of Ames, Iowa. You as a homeowner want to find the best valued property 
@@ -17,11 +17,11 @@ I then evaluated each model using kfold and pipeline and used there R2 score to 
 After finding the best algorithm for the problem, I then evaluated predictions and then made predictions on the testing dataset. 
 Finally, made a submission file to complete the challenge, that was formatted like this:
 - ID, SalePrice
-1461,129136.7401174314
-1462,159600.11994747777
-1463,182479.95184453798
-1464,189899.88910744363
-1465,188330.65480759877
+- 1461,129136.7401174314
+- 1462,159600.11994747777
+- 1463,182479.95184453798
+- 1464,189899.88910744363
+- 1465,188330.65480759877
 
 
 Findings:

@@ -1,17 +1,16 @@
 import numpy as np
 from matplotlib import pyplot as plt
 
-from data import training_dataset, testing_dataset, y_training, X_training, X_testing, preprocessor
+from data import testing_dataset, y_training, X_training, X_testing, preprocessor
 from sklearn.model_selection import train_test_split, KFold, cross_val_score
 from sklearn.linear_model import LinearRegression
 from sklearn.ensemble import GradientBoostingRegressor, RandomForestRegressor
 from sklearn.pipeline import Pipeline
-from sklearn.metrics import classification_report, confusion_matrix, accuracy_score, root_mean_squared_error, r2_score, \
-    mean_squared_error
+from sklearn.metrics import root_mean_squared_error, r2_score
 
-# Splitting the both datasets into 80% will be used for training and the 20% will be used for the validation dataset
+# Splitting the training dataset into 80% will be used for training and the 20% will be used for the validation dataset
 X_train, X_validation, y_train, y_validation = train_test_split(X_training, y_training, test_size=0.2, random_state=1)
-'''
+
 # SpotChecking Algorithms to see which one performs the best
 models = [("LR", LinearRegression()), ("GB", GradientBoostingRegressor()), ("RF", RandomForestRegressor())]
 
@@ -33,8 +32,6 @@ for name, model in models:
 plt.boxplot(results)
 plt.title("Algorithms Comparison")
 plt.show()
-
-'''
 
 print("Using Gradient Boosting to make predictions")
 # Making predictions on a validation set using gradient boosting
@@ -60,4 +57,4 @@ test_predictions = np.maximum(test_predictions, 0)
 submission = testing_dataset[["Id"]].copy()
 submission["SalePrice"] = test_predictions
 submission.to_csv("submission.csv", index=False)
-print("Submisssion file has been created: submission.csv")
+print("Submission file has been created: submission.csv")
